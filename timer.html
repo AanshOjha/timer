@@ -1,0 +1,129 @@
+
+<!doctype html>
+<html lang="en" style="background: linear-gradient(45deg, #30d1ee, #eb22eb)">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Timer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./bulma.css">
+    <script type="text/javascript" src="./mithril.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+	
+	<style>
+	.title,.subtitle {
+		color:#fff;
+	}
+
+    #myVideo {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+	.hero {
+		background:none;
+	}
+
+	.customise
+	{
+		background:none;
+		border:none;
+		color:#fff;
+		font-size: 75px;
+		width:100%;
+		text-align:center;
+        background: -webkit-linear-gradient(270deg, #faf600, #faa303);
+        font-weight: 700;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+	}
+	.customise:focus
+	{
+		outline:none;
+		text-decoration:underline;
+	}
+	.input {
+		background:none;
+		color:#fff;
+	}
+
+    #timer {
+        font-size: largest;
+        }
+	#progress {
+		transition:1s;
+		height:5px;
+		background:#fe9900;
+	}
+
+	</style>
+</head>
+
+<body style="font-family: 'Varela Round', sans-serif !important; font-weight: bolder;">
+
+    <!-- <video autoplay muted loop id="myVideo">
+        <source src="" type="video/mp4">
+    </video> -->
+
+	<div>
+		<div id="progress"></div>
+	</div>
+
+    <!-- <video src="E:\HP\Downloads\Welcome.mp4" autoplay loop width="25%" style="border-radius: 10px; display: block; margin: 0 auto"></video> -->
+    <section>
+        <div class="instruction">
+            <div class="container" style="text-align:center">
+                <input class="customise" type="text" value="Type your instruction here"/>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="hero-body">
+            <div class="container" style="text-align:center">
+                <input class="customise" type="text" value="BREAK :)"/>
+            </div>
+        </div>
+    </section>
+	
+    <section class="hero has-text-centered">
+        <div class="hero-body" style="padding-top: 0;">
+            <div id="timer" style="padding-bottom:20px;"></div>
+            <div class="container" style="border: 20px rgb(24, 93, 243) !important; border-radius: 10px;">
+                <div class="field has-addons has-addons-centered">
+                    <p class="control has-icons-left">
+                        <input id="minutes" class="input" type="text" placeholder="Number of Minutes">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-clock-o"></i>
+                        </span>
+                    </p>
+                    <p class="control">
+                        <a id="start" class="button is-success" onclick="start();">Start</a>
+                    </p>
+                    <p class="control">
+                        <a id="stop" class="button is-danger" onclick="stop();">Stop</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<!--<section>
+        <div class="hero-body">
+            <div class="container" style="text-align:center;color:#fff">
+				<img src="logo.png" width="60px"/>
+            </div>
+        </div>
+    </section>-->
+	
+    <script type="text/javascript" src="./timer.js"></script>
+</body>
+
+</html>
